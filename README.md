@@ -1,3 +1,32 @@
-# app_todolist_sqlite
+# App ToDo List com Flutter + Supabase
 
-"Aplicação de Lista de Tarefas (To-Do) desenvolvida com a arquitetura MVCS e persistência local de dados utilizando SQLite. O aplicativo possui uma interface simples que permite ao usuário adicionar novas tarefas (com título e descrição), marcar e desmarcar tarefas como concluídas e excluí-las completamente."
+Aplicação de lista de tarefas (To-Do) desenvolvida em Flutter utilizando arquitetura MVC-S e integração com Supabase.
+
+## Funcionalidades
+
+- Cadastro de usuários
+- Login com e-mail e senha
+- Login com Google OAuth
+- Persistência de dados em nuvem
+- Separação de tarefas por usuário autenticado
+- CRUD completo de tarefas
+- Logout de sessão
+
+## Tecnologias utilizadas
+
+- Flutter
+- Dart
+- Supabase
+- PostgreSQL
+- OAuth2
+- Git/GitHub
+
+## Estrutura do projeto
+
+```txt
+lib/
+ ├── models/
+ ├── services/
+ ├── views/
+ ├── controllers/
+ └── main.dart
