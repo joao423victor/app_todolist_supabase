@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'services/database_service.dart';
-import 'views/tarefa_page.dart';
 import 'views/login_page.dart';
 //instalar as dependências
 //flutter pub get
@@ -8,6 +8,7 @@ import 'views/login_page.dart';
 void main() async {
   // Garante que os widgets do Flutter estejam inicializados antes de rodar qualquer código nativo
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
   await DatabaseService.inicializar();
   runApp(const MyApp());
 }

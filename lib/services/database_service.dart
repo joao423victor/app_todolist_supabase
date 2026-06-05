@@ -1,3 +1,4 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class DatabaseService {
@@ -6,8 +7,8 @@ DatabaseService._();
 // Método estático responsável por inicializar a conexão com a nuvem
 static Future<void> inicializar() async {
 await Supabase.initialize(
-url: 'https://blnoljpzlmjhydoiillu.supabase.co',
-anonKey: 'sb_publishable_V-YPfts7KlEGWV3UIYYQnQ_rCSDj2iX',
+  url: dotenv.env['SUPABASE_URL']!,
+  anonKey: dotenv.env['SUPABASE_ANON_KEY']!,
 );
 }
 }
