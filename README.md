@@ -1,16 +1,21 @@
 # App ToDo List com Flutter + Supabase
 
-Aplicação de lista de tarefas (To-Do) desenvolvida em Flutter utilizando arquitetura MVC-S e integração com Supabase.
+Aplicação de lista de tarefas desenvolvida em Flutter, com persistência de dados em nuvem utilizando Supabase e arquitetura organizada em camadas.
 
 ## Funcionalidades
 
 - Cadastro de usuários
 - Login com e-mail e senha
-- Login com Google OAuth
-- Persistência de dados em nuvem
-- Separação de tarefas por usuário autenticado
-- CRUD completo de tarefas
+- Autenticação com Google OAuth
 - Logout de sessão
+- Cadastro de tarefas
+- Listagem de tarefas por usuário autenticado
+- Edição de tarefas
+- Exclusão de tarefas
+- Marcação de tarefas como concluídas
+- Persistência de dados no Supabase
+- Geração de relatório em PDF
+- Separação da lógica em controllers, models, services e views
 
 ## Tecnologias utilizadas
 
@@ -20,13 +25,22 @@ Aplicação de lista de tarefas (To-Do) desenvolvida em Flutter utilizando arqui
 - PostgreSQL
 - OAuth2
 - Git/GitHub
+- Pacotes Flutter para geração de PDF
 
 ## Estrutura do projeto
 
-```txt
+```text
 lib/
- ├── models/
- ├── services/
- ├── views/
- ├── controllers/
- └── main.dart
+├── controllers/
+│   └── tarefa_controller.dart
+├── models/
+│   └── tarefa.dart
+├── services/
+│   ├── auth_service.dart
+│   ├── database_service.dart
+│   ├── pdf_service.dart
+│   └── tarefa_service.dart
+├── views/
+│   ├── login_page.dart
+│   └── tarefa_page.dart
+└── main.dart
